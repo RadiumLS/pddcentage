@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <div style="vertical-align: middle; margin-top: 25%; text-align: center;">
+    <p id="prefix">刘看山持有知乎</p>
+    <p>
+      <span id="pddcentage"></span>
+      <span id="unit">%</span>
+    </p>
+    <span id="suffix">的股份</span>
+    </br>
+    </br>
+    <textarea id="explain" style="width:350px; height: 120px;"></textarea>
+    </div>
+  </body>
+  <script>
+    var showNum = 100;
+    var fakeNum = 0;
+    // var pddcentage = '100*(1234567890 *0)';
+    var pddcentage = `${showNum}*(1234567890 *${fakeNum})`;
+    var $pdd = document.getElementById('pddcentage');
+    $pdd.innerText = pddcentage;
+    const css = $pdd.style;
+    css.display = 'inline-block';
+    css.width = '26px';
+    css.height = '19px';
+    css.overflow = 'hidden';
+    document.getElementById('explain').value = '实际数字为\n100*(1234567890 *0) \n但是因为页面样式问题只能显示为100%\n// 如果pdd不认错，使用者就可以删掉这个框中的文字'
+
+  </script>
+</html>
